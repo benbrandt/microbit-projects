@@ -1,0 +1,28 @@
+[package]
+name = "microbit-projects"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ben Brandt <benjamin.j.brandt@gmail.com>"]
+description = "Experiments using Rust and embassy to write programs to run on a micro:bit v2"
+repository = "https://github.com/benbrandt/microbit-projects"
+license = "MIT"
+keywords = ["embedded", "embassy", "microbit"]
+categories = ["embedded"]
+
+[dependencies]
+
+
+[lints.rust]
+future_incompatible = { level = "warn", priority = -1 }
+missing_debug_implementations = "warn"
+missing_docs = "warn"
+nonstandard_style = { level = "warn", priority = -1 }
+rust_2018_compatibility = { level = "warn", priority = -1 }
+rust_2018_idioms = { level = "warn", priority = -1 }
+rust_2021_compatibility = { level = "warn", priority = -1 }
+rust_2024_compatibility = { level = "warn", priority = -1 }
+unused = { level = "warn", priority = -1 }
+
+[lints.clippy]
+cargo = "warn"
+pedantic = "warn"
