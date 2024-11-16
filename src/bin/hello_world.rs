@@ -4,6 +4,7 @@
 #![allow(clippy::used_underscore_binding)]
 
 use embassy_executor::Spawner;
+use microbit_bsp::*;
 use {defmt_rtt as _, panic_probe as _};
 
 #[embassy_executor::main]

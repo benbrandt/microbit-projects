@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
         with:
-          components: rust-src, rustfmt, llvm-tools
+          components: rust-src, rustfmt
           targets: thumbv7em-none-eabihf
       - uses: Swatinem/rust-cache@v2
 
@@ -34,7 +34,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
         with:
-          components: rust-src, rustfmt, clippy, llvm-tools
+          components: rust-src, rustfmt, clippy
           targets: thumbv7em-none-eabihf
       - uses: Swatinem/rust-cache@v2
 
