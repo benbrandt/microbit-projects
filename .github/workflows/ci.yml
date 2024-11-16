@@ -20,12 +20,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
         with:
-          components: rust-src, rustfmt
+          components: rust-src, rustfmt, llvm-tools
           targets: thumbv7em-none-eabihf
       - uses: Swatinem/rust-cache@v2
-      - uses: taiki-e/install-action@v2
-        with:
-          tool: probe-rs-tools
 
       - name: Build
         run: cargo build --bins --release
@@ -37,12 +34,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
         with:
-          components: rust-src, rustfmt, clippy
+          components: rust-src, rustfmt, clippy, llvm-tools
           targets: thumbv7em-none-eabihf
       - uses: Swatinem/rust-cache@v2
-      - uses: taiki-e/install-action@v2
-        with:
-          tool: probe-rs-tools
 
       - run: cargo fmt -- --check
       - run: cargo clippy --workspace --all-features --all-targets
