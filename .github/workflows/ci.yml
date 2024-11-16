@@ -23,6 +23,9 @@ jobs:
           components: rust-src, rustfmt
           targets: thumbv7em-none-eabihf
       - uses: Swatinem/rust-cache@v2
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: probe-rs-tools
 
       - name: Build
         run: cargo build --bins --release
@@ -37,6 +40,9 @@ jobs:
           components: rust-src, rustfmt, clippy
           targets: thumbv7em-none-eabihf
       - uses: Swatinem/rust-cache@v2
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: probe-rs-tools
 
       - run: cargo fmt -- --check
       - run: cargo clippy --workspace --all-features --all-targets
