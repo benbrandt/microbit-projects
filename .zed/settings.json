@@ -1,0 +1,16 @@
+{
+  "lsp": {
+    "rust-analyzer": {
+      //These initialization options are merged into Zed's defaults
+      "initialization_options": {
+        "cargo": {
+          "features": "all",
+          "allTargets": false
+        },
+        "checkOnSave": {
+          "command": "clippy"
+        }
+      }
+    }
+  }
+}
